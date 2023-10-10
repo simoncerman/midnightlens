@@ -1,22 +1,35 @@
+root{
+    --main-bg-color: #FAF3E6;
+
+}
 * {
     font-family: 'AR One Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
+html {
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+}
 header {
-    margin: 1em;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 92%;
+    border-radius: 2%;
+    background-color: white;
+    margin: 10px 0 10px 0;
 }
-h1 {
+header > h1 {
+    color: white;
     background: linear-gradient(45deg, #ff00cc, #00ffcc);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     transition: background 0.5s ease;
+
 }
 h1:hover {
     background: linear-gradient(45deg, #ffcc00, #cc00ff);
@@ -26,4 +39,69 @@ h1:hover {
 }
 .link-logo {
     width: 2.5rem;
+}
+nav > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+nav > ul > li{
+    margin: 1rem;
+    text-decoration: none;
+}
+nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    > .about-container{
+        padding: 1rem;
+        display: flex;
+        > img {
+            width: 40%;
+        }
+        >.about-text{
+            width: 60%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    > .about-container-left{
+        display: flex;
+        flex-direction: row-reverse;
+        >.about-text{
+            align-items: flex-end;
+            >p{
+                text-align: right;
+            }
+        }
+    }
+    > .about-container-right{
+        display: flex;
+    }
+}
+
+.fullscreen-img{
+    width: 100vw;
+    overflow: hidden;
+    overflow-clip-margin:initial;
+}
+
+.fixed-icon{
+    padding: 0.5rem;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
 }
