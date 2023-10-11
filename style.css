@@ -1,11 +1,27 @@
 root{
     --main-bg-color: #FAF3E6;
-
 }
 * {
     font-family: 'AR One Sans', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+section > h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 4rem;
 }
 html {
     overflow-x: hidden;
@@ -17,10 +33,18 @@ header {
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    width: 92%;
     border-radius: 2%;
     background-color: white;
     margin: 10px 0 10px 0;
+}
+.black-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 10vh;
+    width: 100vw;
+    z-index: 2;
 }
 header > h1 {
     color: white;
@@ -31,7 +55,7 @@ header > h1 {
     transition: background 0.5s ease;
 
 }
-h1:hover {
+header > h1:hover {
     background: linear-gradient(45deg, #ffcc00, #cc00ff);
     -webkit-background-clip: text;
     background-clip: text;
@@ -39,6 +63,8 @@ h1:hover {
 }
 .link-logo {
     width: 2.5rem;
+    z-index: 3;
+
 }
 nav > ul {
     display: flex;
@@ -46,6 +72,8 @@ nav > ul {
     flex-direction: row;
     align-items: center;
     list-style: none;
+    z-index: 3;
+
 }
 nav > ul > li{
     margin: 1rem;
@@ -55,6 +83,16 @@ nav > ul > li > a{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+}
+.homepage-navbar{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    >nav > ul > li > a{
+        color: white;
+    }
+    z-index: 4;
 }
 main{
     display: flex;
@@ -69,7 +107,9 @@ main{
         padding: 1rem;
         display: flex;
         > img {
-            width: 40%;
+            max-width: 40%;
+            height: fit-content;
+            border-radius: 30px;
         }
         >.about-text{
             width: 60%;
@@ -105,3 +145,35 @@ main{
     right: 35px;
     bottom: 35px;
 }
+
+.homepage-image{
+    background-image: url(images/olympic.jpg);
+
+    /* Full height */
+    height: 100vh;
+    width: 100%;
+  
+    /* Center and scale the image nicely */ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .column img {
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
