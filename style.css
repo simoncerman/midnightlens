@@ -160,20 +160,22 @@ main{
     z-index: 3;
 }
 
+.small-image-grid{
+    >.row{
+        >.after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        >.column{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            > img {
+                margin-top: 12px;
+                width: 100%;
+            }
+        }
+    }      
+}
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-  }
-  
-  .column img {
-    margin-top: 12px;
-    width: 100%;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
