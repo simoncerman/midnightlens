@@ -454,11 +454,28 @@ table {
     .show-menu{
         display: flex;
     }
+    .shoots{
+        > .shoot-container{
+            width: 100%;
+        }
+        
+    }
+    .gallery{
+        column-count: 2;
+        column-width: 40vw;
+    }
+    table{
+        width: 100%;
+    }
 }
 
 /* Media query for mobile screens */
 @media (max-width: 480px) {
     .images-with-descriptions>.row {
         padding: 0;
+    }
+    .gallery{
+        column-count: 1;
+        column-width: 100vw;
     }
 }
