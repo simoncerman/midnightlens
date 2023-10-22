@@ -8,17 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>   
 </head>
 <body>
     <header>
-        <h1>
-            <div>
-                <div>midnightlens_</div>
-                midnightlens_
+        <div class="top-part">
+            <h1>
+                <div>
+                    <div>midnightlens_</div>
+                    midnightlens_
+                </div>
+            </h1>
+            <div class='menu-button' onclick="showNav()">
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
-        </h1>
+        </div>
         <nav>
-            <ul>
+            <ul id="navigation-ul">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="about.html">O mně</a></li>
                 <li><a href="shoots.html">Focení</a></li>

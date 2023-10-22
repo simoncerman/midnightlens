@@ -29,23 +29,28 @@ header {
     background-color: black;
     color: white;
 
-    >h1 {
-        >div {
-            background: -webkit-linear-gradient(45deg, #ffcc00, #cc00ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+    >.top-part {
+        display: flex;
+        justify-content: space-around;
 
+        >h1 {
             >div {
-                background: -webkit-linear-gradient(45deg, #ff00cc, #00ffcc);
+                background: -webkit-linear-gradient(45deg, #ffcc00, #cc00ff);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                transition: opacity 1s;
-                position: fixed;
 
-                &:hover {
-                    opacity: 0;
+                >div {
+                    background: -webkit-linear-gradient(45deg, #ff00cc, #00ffcc);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    transition: opacity 1s;
+                    position: fixed;
+
+                    &:hover {
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -73,6 +78,40 @@ header {
         }
     }
 }
+
+/* hamburger */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    background-color: transparent;
+
+    >.hamburger {
+        background-color: transparent;
+
+        >div {
+            background-color: white;
+            width: 35px;
+            height: 4px;
+            margin: 6px 0;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+
 /*Separated homepage navbar class */
 .homepage-navbar {
     position: fixed;
@@ -102,7 +141,8 @@ main {
     position: fixed;
     right: 35px;
     bottom: 35px;
-    > .link-logo {
+
+    >.link-logo {
         width: 2.5rem;
         z-index: 3;
     }
@@ -119,6 +159,7 @@ main {
         font-size: 4rem;
     }
 }
+
 .homepage-image {
     background-image: url(images/olympic.jpg);
 
@@ -132,6 +173,7 @@ main {
     background-size: cover;
     z-index: 3;
 }
+
 .small-image-grid {
     column-count: 3;
     column-width: 300px;
@@ -325,27 +367,31 @@ table {
 }
 
 /* contact.html primary styles */
-.contact-center{
+.contact-center {
     display: flex;
     height: 100vh;
     width: 100vw;
     text-align: center;
     align-items: center;
     justify-content: center;
-    >.content{
+
+    >.content {
         padding: 2rem;
         background-color: #000000;
         border-radius: 2rem;
         color: white;
-        >.row{
+
+        >.row {
             justify-content: space-between;
             display: flex;
-            >a{
+
+            >a {
                 color: white;
                 text-decoration: none;
                 padding: 0.5rem;
             }
-            >p{
+
+            >p {
                 padding: 0.5rem;
             }
         }
@@ -384,6 +430,29 @@ table {
                 width: 100%;
             }
         }
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    header>nav>ul {
+        display: none;
+    }
+
+    header {
+        background-color: black;
+        align-items: normal;
+        flex-direction: column;
+    }
+
+    #navigation-ul {
+        flex-direction: column;
+        background-color: black;
+        border-radius: 1rem;
+    }
+    .show-menu{
+        display: flex;
     }
 }
 
