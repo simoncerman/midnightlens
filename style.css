@@ -15,6 +15,13 @@ body {
     align-items: center;
 }
 
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+
 header {
     position: sticky;
     display: flex;
@@ -34,7 +41,9 @@ header {
         justify-content: space-around;
         >a{
             text-decoration: none;
-            >h1 {
+            >div {
+                font-size: 2rem;
+                font-weight: 900;
                 >div {
                     background: -webkit-linear-gradient(45deg, #ffcc00, #cc00ff);
                     -webkit-background-clip: text;
@@ -159,7 +168,6 @@ main {
     >h1 {
         margin-block-start: 0;
         margin-block-end: 0;
-        font-size: 4rem;
     }
 }
 
@@ -199,6 +207,12 @@ main {
     width: 80%;
     display: flex;
     flex-direction: column;
+    
+    >h1{
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
 
     >.about-container {
         padding: 1rem;
@@ -474,9 +488,6 @@ table {
 
 /* Media query for mobile screens */
 @media (max-width: 480px) {
-    .images-with-descriptions>.row {
-        padding: 0;
-    }
     .gallery{
         column-count: 1;
         column-width: 100vw;
