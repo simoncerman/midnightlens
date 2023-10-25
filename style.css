@@ -27,6 +27,17 @@ form{
     flex-direction: column;
 }
 
+footer{
+    display: flex;
+    background-color: black;
+    height: 3rem;
+    align-items: center;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
 header {
     position: sticky;
     display: flex;
